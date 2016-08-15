@@ -2,6 +2,14 @@
 body,ul,li,h1,h2,h3,input,ol{margin: 0;padding: 0;}
 li{list-style:none;}
 a{text-decoration: none;}
+html *,
+html *:before,
+html *:after {
+  
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 
 #nav{background: url(../../imgs/bg/nav_bg.gif) repeat-x; height: 200px;margin: 0 auto;}
 #nav .nav-container{width: 1280px;height: 168px;  margin: auto; position: absolute;  top: 30px; left: 0; right: 0;}
@@ -11,25 +19,28 @@ a{text-decoration: none;}
 .nav-menu ul {position: relative;left: 12px;top: 40px;display: 0none;}
 .nav-menu ul li, .nav-r-menu .lang-menu ul li {text-transform: uppercase;margin-bottom: 8px;
 	background-color: #fdfdfd;float: left;border-radius: 5px;clear: both;overflow: hidden;}
-
-
 .nav-menu a, .nav-r-menu .lang-menu ul li a{   border-radius: 5px;color: #041527;display: inline-block;font-size: 14px;
-	font-weight: bold;height: 40px;line-height: 40px;padding: 0 20px;transition: all 0.3s ease 0s;position: relative;
-	z-index: 1;font-family: Arial, sans-serif;overflow:hidden;}
-.nav-menu a:hover{
-content: '';
-position: relative;
-top: 0;
-left: -100%;
-z-index: -1;
-border-radius: 5px;
--moz-transition: all 0.3s;
--o-transition: all 0.3s;
--webkit-transition: all 0.3s;
-transition: all 0.3s;
-width: 100%;
-height: 100%;
+	font-weight: bold;height: 40px;line-height: 40px;padding: 0 20px;position: relative;
+	z-index: 1;font-family: Arial, sans-serif;}
+.nav-menu a:before, .nav-r-menu .lang-menu ul li a:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
 background: #02bb71;
+}
+
+
+.nav-menu a:hover, .nav-r-menu .lang-menu ul li a:hover{
+color: #fff;
+}
+
+.nav-menu a:hover:before,  .nav-r-menu .lang-menu ul li a:hover:before{
+
+width: 100%;
+z-index: -1;
 }
 
 .nav-mid-logo{width: 128px;height: 106px;margin: -32px auto;}
