@@ -4,7 +4,7 @@ li{list-style:none;}
 a{text-decoration: none;}
 html *,
 html *:before,
-html *:after {box-sizing: border-box;-webkit-transition: 0.5s; transition: 0.5s;}
+html *:after {box-sizing:border-box;-webkit-transition: 0.5s; transition: 0.5s;}
 
 
 
@@ -49,22 +49,21 @@ border-radius: 5px;font-weight: bold;letter-spacing: 1px;}
 
 
 
-#header{height: 240px;background:url(../../imgs/bg/header_bg.gif) repeat-x; }
-.header-con{width: 1366px;margin: 0 auto;}
+#header{height: 240px;background:url(../../imgs/bg/header_bg.gif) repeat-x;}
 #header h1{color: #00C6FF;font-family: 'Open Sans', Arial, sans-serif;font-size: 56px;line-height: 60px; 
 text-align: center;font-weight: normal;}
 #header span{font-size: 120px;display: block;line-height: 140px;font-weight: bold;}
-#header .moon{position: absolute;top: 210px;margin-left:1060px; width: 196px;height: 196px;}
-#header .moon img{width: 100%;height: 100%;display: block;}
+#header .moon{position: absolute;top: 180px; width: 196px;height: 196px;right: 0;left: 900px;margin: auto;}
+
 
 
 
 
 
 #main .top-title{background: url(../../imgs/bg/main-top-title_bg.gif) repeat-x; height: 162px;margin-top: -28px;}
-.top-title img{display: block;width: 108px;position: relative;left: 20%;}
+.top-title img{width: 108px;position: absolute;top: 400px;right: 0;left: -800px;margin: auto;}
 .top-title h4{color: #fff;font-family: 'PT Sans', Arial, sans-serif;font-weight: normal;font-size: 20px;
-text-align: center;margin-top: -50px;}
+text-align: center;margin-top: -20px;}
 .btn-arrow-down .arrow-down-p1,.btn-arrow-down .arrow-down-p2,.btn-arrow-down .arrow-down-p3{width: 58px;
 	height: 41px;position: absolute;display: inline-block;}
 .btn-arrow-down{display: inline-block; position: absolute;left: 50%; margin-left: -29px;z-index: 10;}
@@ -74,15 +73,124 @@ text-align: center;margin-top: -50px;}
 
 
 .center-planet, .big-planet, .big-planet h2, .big-planet h4{font-family:'PT Sans',Arial,sans-serif;}
-.center-planet{background: url(../../imgs/bg/center-planet_bg.gif) repeat-x;height:1100px; }
-.big-planet img{position: absolute;right: 0;left: 0;margin: 560px auto; bottom: 0;top: 0;}
-.big-planet h2{color: #fdc12d;font-size: 40px;font-weight: bold;text-align: center;position: relative;top: 340px;}
+.big-planet .planet-pic img, .big-planet .planet-text{position: absolute;left: 0;right: 0;}
+.center-planet{background: url(../../imgs/bg/center-planet_bg.gif) repeat-x;height: 1100px;}
+.big-planet .planet-pic img{margin: -30px auto; }
+.big-planet .planet-text{margin: 340px auto; text-align: center;}
+.big-planet h2{color: #fdc12d;font-size: 40px;font-weight: bold;}
 .big-planet h2 span{font-style: italic;}
-.big-planet h4{text-align: center;position: relative;top: 360px;color: #00C6FF;font-size: 18px;}
-.big-planet p{width: 440px;margin: 0 auto 60px;color: #fff;font-size: 16px;line-height: 35px;text-align: center;
-font-family: 'PT Sans Narrow', Arial, sans-serif;position: relative;left: 0;right: 0;top: 360px;bottom: 0;}
-.big-planet a{background: #02bb71;color: #fdfdfd;font-size: 10px;font-family:  "PT Sans",Arial,sans-serif;
--webkit-transform:scale(0.9); 
-box-shadow: 0 4px #017e4c;vertical-align:middle;height: 50px;display:inline-block;line-height:50px;padding:0 35px;
-border-radius: 5px;font-weight: bold; font-size:18px; position: relative;left: 40%;top: 350px;}
+.big-planet h4{color: #00C6FF;font-size: 18px;}
+.big-planet p{width: 440px;color: #fff;font-size: 16px;line-height: 35px;font-family: 'PT Sans Narrow', Arial, sans-serif;
+margin: 0 auto 60px;}
+.big-planet a{background: #02bb71;color: #fdfdfd;box-shadow: 0 4px #017e4c;vertical-align:middle;height: 50px;
+	display:inline-block;line-height:50px;padding:0 35px;border-radius: 5px;font-weight: bold; font-size:18px;}
 .big-planet a:hover{box-shadow: 0 2px #017e4c;margin-top:2px;position: relative;}
+#astro {position: absolute;top: 1240px;left: 10px;right:1200px;margin: auto;width: 200px;}
+#astro img{}
+
+
+
+.e-sports{margin: 0 auto;background: url(../../imgs/bg/e-sports_bg.gif) repeat-x; height: 2420px;margin-top: -162px;}
+.e-sports-con{width: 990px;margin: 160px auto 30px;}
+.e-sports-con h3{font-size: 42px;margin-bottom: 25px;color: #fff;text-align: center;font-family: 'PT Sans', Arial, sans-serif;
+font-weight: bold}
+.e-sports-con h4{margin: 25px 0;color: #00C6FF;font-size: 20px;font-family: 'PT Sans', Arial, sans-serif;text-align: center;}
+.e-sports-con p{color: #fff;font-size: 20px;line-height: 35px;font-family: 'PT Sans Narrow', Arial, sans-serif;text-align: center;
+margin: 0 auto;}
+.rhombs{margin: 100px auto; width: 1300px;cursor: pointer;position: relative;}
+.rhombs>div{margin-left: 150px;}
+.rhombs-block{display: inline-block;width: 250px;height: 250px;border: 3px solid #fff;background: #041527;vertical-align: middle;
+transform:rotate(45deg);-ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); 
+-o-transform:rotate(45deg); }
+.rhombs-block .rhombs-pic img{display: block;margin: 64px 0 0 64px;z-index: 2;    position: absolute;    -webkit-transition: all 0.22s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;}
+
+/*.rhombs:hover .rhombs-pic img{ -webkit-transform: skew(45deg,45deg);
+    -moz-transform: skew(45deg,45deg);
+    -ms-transform: skew(45deg,45deg);
+    -o-transform:  skew(45deg,45deg);
+    transform: skew(45deg,45deg);}
+.rhombs:hover .back-con{     visibility: visible;
+    left: 0;
+    -webkit-transform: skew(0deg,45deg);
+    -moz-transform: skew(0deg,45deg);
+    -ms-transform: skew(0deg,45deg);
+    -o-transform:  skew(0deg,45deg);
+    transform: skewY(180deg);
+}}*/
+.rhombs-block .rhombs-pic .popcorn{display: block;margin: 50px 0 0 60px;}
+.rhombs-block .rhombs-pic .dollars{display: block;margin: 64px 0 0 32px;}
+.rhombs-block .back-con, .rhombs-block img{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg); }
+.rhombs-block .back-con{width: 250px;height: 250px;background: #fff;transform: rotate(0deg);-ms-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg); z-index: 1; -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;-o-transition: all 0.2s;transition: all 0.2s;position: absolute;left: -250px;visibility: hidden;}
+.rhombs-block span{color: #00C6FF;font-weight: bold;font-family: 'PT Sans', Arial, sans-serif;font-size: 30px; transform: rotate(-45deg);
+display: block;position: relative;left: -20px;top: 60px;}
+.rhombs-block span b{font-size: 20px;}
+.rhombs-block p, .rhombs .block2 span, .rhombs .block3 span{text-align: center;position: relative;}
+.rhombs-block p{transform: rotate(-45deg);display: block;width: 180px;margin: 80px auto;color: #8a8a8a;font-size: 14px;
+line-height: 24px;font-family: 'PT Sans Narrow', Arial, sans-serif;}
+.rhombs .block2 span{left: -40px;top: 40px;}
+.rhombs .block2 p{margin:30px  0 0 50px;}
+.rhombs .block3 span{left: -30px;top: 60px;}
+.rhombs .block3 p{margin:50px  0 0 70px;}
+
+
+.viewers{margin-top: 120px;}
+.viewers h3{font-size: 42px;margin-bottom: 25px;color: #fff;font-size: 46px;font-family: 'PT Sans', Arial, sans-serif;font-weight: bold;
+text-align: center;}.viewers p{color: #fff;font-size: 16px;line-height: 35px;font-family: 'PT Sans Narrow', Arial, sans-serif;text-align: center;}
+
+
+.rocket-data{margin: 300px auto;text-align: center;}
+.rocket{display: inline-block;vertical-align: top;width: 150px;margin-left: 60px;}
+.rocket img{    display: block;  margin: 0 auto;}
+.rocket .text-top{margin-bottom: 30px;color: #ccc;font-size: 18px;font-family: 'Open Sans', Arial, sans-serif;font-weight: bold;}
+.rocket .rocket-container{margin: 30px auto 50px;}
+.rocket .rocket-container img{}
+.rocket .text-bottom{margin-top: 25px;color: #fff;font-family: Arial, sans-serif;font-size: 14px;}
+.rocket5 .text-top{color: #00C6FF;font-size: 28px;}
+
+
+.e-bottom-text{width: 990px;margin: -160px auto 30px;text-align: center;}
+.e-sport-bottom h3, .e-sport-bottom h4{font-family: 'PT Sans', Arial, sans-serif;font-weight: bold;}
+.e-sport-bottom h3{font-size: 42px; margin-bottom: 25px; color: #fff;font-style: italic;}
+.e-sport-bottom h4{margin: 25px 0;color: #00C6FF;font-size: 20px;}
+.e-sport-bottom p{color:#fff;font-size: 18px;line-height: 35px;font-family: 'PT Sans Narrow', Arial, sans-serif;}
+.e-sport-bottom ul{text-align: center;}
+.e-sport-bottom ul li{display: inline-block;vertical-align: top;width:300px;height: 270px;margin-left: 10px;}
+.e-sport-bottom ul li img{height: 36%;width: auto;margin: 0 auto 30px;display: block;}
+.e-sport-bottom .steps .num{width: 40px;height: 40px;line-height: 40px;border-radius: 50%;
+	background: #041527;font-size: 20px;font-weight: bold;color: #00C6FF;}
+.e-sport-bottom .steps .step-intro{display: inline-block;margin: 6px 0 0 6px;color: white;font-size: 16px;line-height: 28px;
+	font-family: 'PT Sans', Arial, sans-serif;text-align: left;}
+
+
+.our-project{background: url(../../imgs/bg/last_bg.gif) repeat-x;height: 2740px;}
+.our-project h3, .our-project h3, .planet-2-area .planet-2-text p{font-family: 'PT Sans', Arial, sans-serif;} 
+.planet-2-area .planet-2-orbit, .planet-2-area .orbit-rocket, .planet-2-area .planet-2-text, .planet-2-area .planet-2-pic{position: absolute;}
+.our-project-text{width: 990px;margin: 0 auto 30px;text-align: center;}
+.our-project h3{margin-bottom: 25px;color: #fff;font-size: 50px;font-weight: bold;}
+.our-project h4{margin: 25px 0;color: #00C6FF; font-size: 20px; }
+ .planet-2-area{position: relative;width: 600px;height: 560px;overflow: visible;margin: 0 auto;}
+.planet-2-area .planet-2-orbit{top: 0;left: 20px;width: 560px;height: 560px;-moz-border-radius: 50%
+	-webkit-border-radius: 50%;border-radius: 50%;border: 2px dashed #fff;}
+.planet-2-area .orbit-rocket{z-index: 9;top: 50%;left: 50%;margin: -19px 0 0 -17px;}
+.planet-2-area .planet-2-pic{top: 50%;left: 50%;margin: -244px 0 0 -244px;}
+.planet-2-area .planet-2-text{top: 200px;left: -110px;z-index: 10;}
+.planet-2-area .planet-2-text p{text-align: center;color: #fff;font-size: 22px;}
+.planet-2-area .planet-2-text .offsets{width: 900px;padding-left: 310px;}
+.planet-2-area .planet-2-text .title{display: block;width: 826px;margin: 20px 0;text-align: center;}
+
+.our-project-bottom{margin-top: 50px;width: 990px;margin: 60px auto 30px;text-align: center;}
+.our-project-bottom p{color: #fff;font-size: 20px;line-height: 35px;font-family: 'PT Sans Narrow', Arial, sans-serif;}
+.our-project-bottom .pic-list{ margin-top: 20px;}
+.our-project-bottom .pic-list img{display: inline-block;vertical-align: middle;}
+
+
+
+
+
+
