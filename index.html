@@ -4,15 +4,30 @@
 	 <meta charset="utf-8" />
 	  <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" />
 	 <title>Easy Rocket Studio - e-Sports Website Engine development</title>
-	 <link rel="stylesheet" type="text/css" href="stylesheets/customize/index.css" />
+	 <link rel="stylesheet"  href="stylesheets/customize/index.css" />
+	 <link rel="stylesheet"  href="stylesheets/customize/animation.css">
+	<script>
+window.onload = function(){
+      var oBtn = document.getElementById('btn');
+      var oLangBtn = document.getElementById('lang-btn')
+      var oBtnMenu = document.getElementById('btn_menu');
+      var oLangLi = document.getElementById('lang-li');
+
+      
+      	menuShowHide(oBtn,oBtnMenu);	
+      	menuShowHide(oLangBtn,oLangLi)
+      
 	
+}
+
+</script>
 </head>
 <body>
 	<nav id="nav">
 		<div class="nav-container">
 			<div class="nav-menu">
-				<a href="#" class="btn"></a>
-				<ul>
+				<a href="#" class="btn" id="btn"></a>
+				<ul id="btn_menu">
 					<li><a href="#">ABOUT</a></li>
 					<li><a href="#">E-SPORTS</a></li>
 					<li><a href="#">OUR PROJECTS</a></li>
@@ -28,9 +43,9 @@
 
 			<div class="nav-r-menu">
 				<a href="#" class="intro">DOWNLOAD PRESENTATION</a>
-				<a href="#" class="lang-btn">EN<span></span></a>
+				<a href="#" class="lang-btn"  id="lang-btn">EN<span></span></a>
 				<div class="lang-menu">
-					<ul>
+					<ul id="lang-li">
 						<li><a href="#">RU</a></li>
 						<li><a href="#">EN</a></li>
 					</ul>	
@@ -67,9 +82,16 @@
 		<div class="center-planet">
 			<div class="big-planet">
 				<div class="planet-pic">
-					<img src="imgs/pictures/planet-big-with-orbits.png">
-					<img src="http://easyrocketstudio.com/img/stars3.svg " alt=" " />
 					<img src="http://easyrocketstudio.com/img/stars2.svg" alt="" />
+				</div>
+				<div class="planet-pic-2">
+					<img src="http://easyrocketstudio.com/img/stars3.svg " alt=" " />
+
+				</div>
+				<div class="round-dot">
+					<span class="round-1"></span>
+					<span class="round-2"></span>			
+					<span class="round-3"></span>
 				</div>
 				<div class="planet-text">
 					<h2>What is <span>Big Deal Engine?</span></h2>
@@ -425,7 +447,7 @@
 
 
 
-
+<script src="javascript/main/main.js"></script>
 
 </body>
 </html>
