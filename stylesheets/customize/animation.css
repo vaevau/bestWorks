@@ -107,7 +107,28 @@ animation:swimg 60s infinite alternate;
 }
 
 
-/*part of showHide*/
+/*part of shadow twinking*/
+.rhombs-block{animation:twinking-outer 0.8s infinite ease-in-out alternate;
+-webkit-animation:twinking-outer 0.8s infinite ease-in-out alternate;
+-moz-animation:twinking-outer 0.8s infinite ease-in-out alternate;
+-o-animation:twinking-outer 0.8s infinite ease-in-out alternate;}
+.rhombs-pic{animation:twinking 0.4s infinite ease-in-out alternate;
+-webkit-animation:twinking 0.4s infinite ease-in-out alternate;
+-moz-animation:twinking 0.4s infinite ease-in-out alternate;
+-o-animation:twinking 0.4s infinite ease-in-out alternate;}
+@keyframes twinking
+{
+	from{box-shadow:0 0 0 0px rgba(254,254,254,0.07)}
+	to{box-shadow:0 0 0 10px rgba(254,254,254,0.07)}
+}
+@keyframes twinking-outer
+{
+	from{box-shadow:0 0 0 0px rgba(254,254,254,0.07)}
+	to{box-shadow:0 0 0 16px rgba(254,254,254,0.07)}
+}
+
+
+
 
 /*part of clouds move*/
 .cloud-1{top: 60px;left: -100px;width: 98px;height: 36px;background: url(../../imgs/bg/cloud-1.png) no-repeat;
