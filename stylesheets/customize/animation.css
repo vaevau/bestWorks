@@ -8,33 +8,33 @@ animation: rotate 30s infinite linear;
 } 
 @keyframes rotate{ 
 
-from{-moz-transform: rotate(0deg); 
--webkit-transform: rotate(0deg); 
--o-transform: rotate(0deg); 
--ms-transform: rotate(0deg); 
-transform: rotate(0deg); 
-}
-to {-moz-transform: rotate(360deg); 
--webkit-transform: rotate(360deg); 
--o-transform: rotate(360deg); 
--ms-transform: rotate(360deg); 
-transform: rotate(360deg);    
-}
+	from{-moz-transform: rotate(0deg); 
+	-webkit-transform: rotate(0deg); 
+	-o-transform: rotate(0deg); 
+	-ms-transform: rotate(0deg); 
+	transform: rotate(0deg); 
+	}
+	to {-moz-transform: rotate(360deg); 
+	-webkit-transform: rotate(360deg); 
+	-o-transform: rotate(360deg); 
+	-ms-transform: rotate(360deg); 
+	transform: rotate(360deg);    
+	}
 }
 
 
 
-.round-dot .round-1{  -webkit-animation: dot-rotate-1 6s linear infinite;
+.round-dot .round-1, .aaa{  -webkit-animation: dot-rotate-1 6s linear infinite;
 -moz-animation: dot-rotate-1 6s linear infinite;
 -0-animation: dot-rotate-1 6s linear infinite;}
-@keyframes dot-rotate-1 {
+	@keyframes dot-rotate-1 {
 
-from {
-  transform: rotateZ(0deg);
-}
-to {
-  transform: rotateZ(360deg);
- }
+	from {
+	  transform: rotateZ(0deg);
+	}
+	to {
+	  transform: rotateZ(360deg);
+	 }
 }
 
 
@@ -43,12 +43,12 @@ to {
 -o-animation: dot-rotate-1 10s linear infinite;}
 @keyframes dot-rotate-2 {
 
-from {
-  transform: rotateZ(0deg);
-}
-to {
-  transform: rotateZ(-360deg);
- }
+	from {
+	  transform: rotateZ(0deg);
+	}
+	to {
+	  transform: rotateZ(-360deg);
+	 }
 }
 
  
@@ -65,9 +65,9 @@ animation:swimg 60s infinite alternate;
 100%{transform:rotateZ(-30deg);}
 }
 
-.navigator{animation: zhangweiwei 10s linear    infinite alternate;}
+.navigator{animation: swimg-2 10s linear    infinite alternate;}
 
- @keyframes zhangweiwei {
+ @keyframes swimg-2 {
 0% {
                 transform: rotate3D(0, 0, 1, 0deg);
             }
@@ -79,7 +79,8 @@ animation:swimg 60s infinite alternate;
 
 /*part of fadeInOut*/
 
-.btn-arrow-down span {animation: fadeInOut 2s linear infinite alternate;
+.btn-arrow-down span {
+	animation: fadeInOut 2s linear infinite alternate;
 	-webkit-animation:fadeInOut 2s linear infinite alternate;
 	-o-animation:fadeInOut 2s linear infinite alternate;
 }
@@ -93,7 +94,9 @@ animation:swimg 60s infinite alternate;
 }
 
 
-.block1:hover .back-con, .rhombs-pic, .block2:hover .back-con, .rhombs-pic,.block3:hover .back-con, .rhombs-pic{animation: overturn 1s linear;}
+.block1:hover .back-con, .rhombs-pic, .block2:hover .back-con, .rhombs-pic,
+.block3:hover .back-con, .rhombs-pic{animation: overturn 0.4s linear;
+-o-animation: overturn 0.4s linear;-webkit-animation: overturn 0.4s linear;-moz-animation: overturn 0.4s linear;}
 
 @keyframes overturn {
 	0%{transform: rotateY(180deg);
@@ -104,6 +107,7 @@ animation:swimg 60s infinite alternate;
 }
 
 
+/*part of showHide*/
 
 /*part of clouds move*/
 .cloud-1{top: 60px;left: -100px;width: 98px;height: 36px;background: url(../../imgs/bg/cloud-1.png) no-repeat;

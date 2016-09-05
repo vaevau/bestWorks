@@ -4,24 +4,36 @@ ul, li{list-style:none;}
 a{text-decoration: none;outline: none;}
 html *,
 html *:before,
-html *:after {box-sizing:border-box;-webkit-transition: 0.5s; transition: 0.5s;}
+html *:after {box-sizing:border-box;}
+body{overflow-x: hidden;}
 
 
+/*js generate css*/
 
+#ball{width: 6px;
+height: 6px;
+background: #fff;
+border-radius: 50%;
+position: absolute;
+}
+
+
+ /*basic css*/
+ #asteriods img{position: absolute;left: -640px;}
 
 #nav{background: url(../../imgs/bg/nav_bg.gif) repeat-x; height: 200px;margin: 0 auto;}
 #nav .nav-container{width: 1280px;height: 168px;  margin: auto; position: absolute;  top: 30px; left: 0; right: 0;}
 .nav-menu .btn{width: 44px;height: 30px;background: url(../../imgs/bg/nav-menu-bg.gif) no-repeat;display: block;
-	position: relative;top: 20px;left: 18px;}
+	position: fixed;top: 50px;left: 50px;}
 .nav-menu .btn:hover{background: url(../../imgs/bg/nav-menu-bg_hover.gif) no-repeat;}
-.nav-menu ul {position: relative;left: 12px;top: 40px;display: none;}
+.nav-menu ul {position: relative;left: 14px;top: 70px;display: none;}
 .nav-menu ul li, .nav-r-menu .lang-menu ul li {margin-bottom: 8px;background-color: #fdfdfd;float: left;border-radius: 5px;clear: both;
 	overflow: hidden;}
 .nav-menu ul li a, .nav-r-menu .lang-menu ul li a{   border-radius: 5px;color: #041527;display: inline-block;font-size: 14px;
 	font-weight: bold;height: 40px;line-height: 40px;padding: 0 20px;position: relative;z-index: 1;font-family: Arial, sans-serif;
 cursor: pointer;}
 .nav-menu ul li a:before, .nav-r-menu .lang-menu ul li a:before{content: ''; position: absolute;top: 0;left:0;width: 0;height: 100%;
-background: #02bb71;}
+background: #02bb71;-webkit-transition: 0.5s; transition: 0.5s;}
 .nav-menu ul li a:hover, .nav-r-menu .lang-menu ul li a:hover{color: #fff;}
 .nav-menu ul li a:hover:before,  .nav-r-menu .lang-menu ul li a:hover:before{width: 100%;z-index: -1;}
 .nav-menu ul li a:before, .nav-r-menu .lang-menu ul li a:before{content: '';position: absolute;top: 0;left: 0;width: 0;height: 100%;
@@ -38,8 +50,8 @@ padding:0 20px;border-radius: 5px;font-weight: bold;letter-spacing: 1px;}
 .nav-r-menu .intro:hover{box-shadow: 0 2px #017e4c;top: 2px;position: relative;}
 .nav-r-menu .lang-btn{color: #fdfdfd;font-family: arial;font-weight: bold;font-size: 18px;top: 4px;position: relative; }
 .nav-r-menu .lang-btn span{width: 12px;height: 8px;background: url(../../imgs/icon/switch-lang-ico.gif) no-repeat;position: relative;
-	display: inline-block;right: -6px;outline: none;}
-.nav-r-menu .lang-menu ul{display: -none;margin-left: 210px;margin-top: 20px;}
+	display: inline-block;right: -6px;}
+.nav-r-menu .lang-menu ul{display: none;margin-left: 210px;margin-top: 20px;}
 @-moz-document url-prefix(){ .nav-r-menu .lang-menu ul {margin-left: 196px;}
 .lang-btn{margin-left: 10px;}
 }
@@ -102,7 +114,7 @@ margin: 0 auto;}
 .rhombs>div{margin-left: 150px;}
 .rhombs-block{display: inline-block;width: 250px;height: 250px;border: 3px solid #fff;background: #041527;vertical-align: middle;
 transform:rotate(45deg);-ms-transform:rotate(45deg); -moz-transform:rotate(45deg); -webkit-transform:rotate(45deg); 
--o-transform:rotate(45deg); }
+-o-transform:rotate(45deg); box-shadow: 0 0 40px rgba(254,254,254);}
 .rhombs-block .rhombs-pic img{display: block;margin: 64px 0 0 64px;z-index: 2;position: absolute;}
 
 .rhombs-block .rhombs-pic .popcorn{display: block;margin: 50px 0 0 60px;}
@@ -110,7 +122,7 @@ transform:rotate(45deg);-ms-transform:rotate(45deg); -moz-transform:rotate(45deg
 .rhombs-block .back-con, .rhombs-block img{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-moz-transform:rotate(-45deg);
 	-webkit-transform:rotate(-45deg);-o-transform:rotate(-45deg); }
 .rhombs-block .back-con{width: 250px;height: 250px;background: #fff;transform: rotate(0deg);-ms-transform:rotate(0deg);
-	-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg); z-index: 1;visibility: hidden;}
+	-moz-transform:rotate(0deg);-webkit-transform:rotate(0deg);-o-transform:rotate(0deg); z-index: 1;display: none;}
 .rhombs-block span{color: #00C6FF;font-weight: bold;font-family: 'PT Sans', Arial, sans-serif;font-size: 30px; transform: rotate(-45deg);
 display: block;position: relative;left: -20px;top: 60px;}
 .rhombs-block span b{font-size: 20px;}
@@ -122,7 +134,7 @@ line-height: 24px;font-family: 'PT Sans Narrow', Arial, sans-serif;}
 .rhombs .block3 span{left: -30px;top: 60px;}
 .rhombs .block3 p{margin:50px  0 0 70px;}
 .block1:hover .rhombs-pic, .block2:hover .rhombs-pic, .block3:hover .rhombs-pic{transform: rotateY(180deg);}
-.block1:hover .back-con, .block2:hover .back-con, .block3:hover .back-con{visibility: visible;}
+.block1:hover .back-con, .block2:hover .back-con, .block3:hover .back-con{display: block;}
 
 .viewers{margin-top: 120px;}
 .viewers h3{font-size: 42px;margin-bottom: 25px;color: #fff;font-size: 46px;font-family: 'PT Sans', Arial, sans-serif;font-weight: bold;
@@ -160,7 +172,10 @@ text-align: center;}.viewers p{color: #fff;font-size: 16px;line-height: 35px;fon
  .planet-2-area{position: relative;width: 600px;height: 560px;overflow: visible;margin: 0 auto;}
 .planet-2-area .planet-2-orbit{top: 0;left: 20px;width: 560px;height: 560px;-moz-border-radius: 50%
 	-webkit-border-radius: 50%;border-radius: 50%;border: 2px dashed #fff;}
-.planet-2-area .orbit-rocket{z-index: 9;top: 50%;left: 50%;margin: -19px 0 0 -17px;}
+.planet-2-area .orbit-rocket{z-index: 9;top: 0%;left: 50%;margin: -19px 0 0 -17px;}
+.aaa{width:2px;height: 280px;position: absolute;left: 50%;margin-top: -36px;transform-origin: 50% 100%;}
+.aaa:after{background: url(../../imgs/pictures/rocket-yellow.png) no-repeat;position: absolute;width:66px;height: 36px;
+content: "";transform: rotate(92deg);}
 .planet-2-area .planet-2-pic{top: 50%;left: 50%;margin: -244px 0 0 -244px;}
 .planet-2-area .planet-2-text{top: 200px;left: -110px;z-index: 10;}
 .planet-2-area .planet-2-text p{text-align: center;color: #fff;font-size: 22px;}
@@ -183,17 +198,21 @@ text-align: center;}
 .mod-list{position: relative;z-index: 1000;width: 100%;height: 640px;}
 .mod-list >li{float: left;width: 20%;font-size: 14px;font-family: Arial,sans-serif;}
 .mod-list article{display: block;}
-.mod-list .mod-pic{position: relative;width: 100%;height: 360px;padding: 25px 0;background: #112132;overflow: hidden;
-	-moz-transition: all 0.3s;-o-transition: all 0.3s;-webkit-transition: all 0.3s;transition: all 0.3s;}
-.mod-list .mod-pic img{filter: grayscale(1);-webkit-filter: grayscale(1);transition: 0.3s;display: block;position: absolute;
+.mod-list .mod-pic{position: relative;width: 100%;height: 360px;padding: 25px 0;background: #112132;overflow: hidden;}
+.mod-list .mod-pic img{filter: grayscale(1);-webkit-filter: grayscale(1);display: block;position: absolute;margin: 0 auto;
 top: 50%;left: 50%;-moz-transform: translate(-50%, -50%) scale(0.7);-ms-transform: translate(-50%, -50%) scale(0.7);
--webkit-transform: translate(-50%, -50%) scale(0.7);transform: translate(-50%, -50%) scale(0.7);
--moz-transition: all 0.3s;-o-transition: all 0.3s;-webkit-transition: all 0.3s;transition: all 0.3s;}
+-webkit-transform: translate(-50%, -50%) scale(0.7);transform: translate(-50%, -50%) scale(0.7);width: 140%;height: 60%;}
+.mod-list .mod-pic:hover img{filter: grayscale(0);-webkit-filter: grayscale(0);-webkit-transform:scale(1.1); -moz-transform:scale(1.1);
+position: absolute;left: -20%;top: 20%;}
+
+
 .mod-list .mod-info{position: relative;color: #fff;text-align: center;}
+.mod-list .mod-info:hover .info-entire{display: block;}
+.mod-list .mod-info:hover .info-summary{display: none;}
 .mod-list .mod-info h3{font-size: 16px;margin: 20px 0 0;color: #00C6FF;}
 .mod-list .mod-info .info-summary{position: absolute;top: 25px;left: 0;width: 100%;font-size: 16px;line-height: 35px;}
-.mod-list .mod-info .info-entire{display: none;height: 176px;padding-top: 0px;margin-top: 0px;padding-bottom: 25px; margin-bottom: 0px;
-width: 100%;padding: 0 25px 25px;position: absolute;top: 25px left:0;}
+.mod-list .mod-info .info-entire{height: 176px;padding-top: 0px;margin-top: 0px;padding-bottom: 25px; margin-bottom: 0px;
+width: 100%;padding: 0 25px 25px;position: absolute;top: 25px left:0;display: none;animation: all 10s;}
 .mod-list .mod-info .info-entire p{font-size: 16px;line-height: 24px;text-align: center;}
 .mod-list .mod-info .info-entire ul li{color: #02bb71;font-size: 16px;line-height: 26px;}
 

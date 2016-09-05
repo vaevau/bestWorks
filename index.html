@@ -8,27 +8,66 @@
 	 <link rel="stylesheet"  href="stylesheets/customize/animation.css">
 	<script>
 window.onload = function(){
-      var oBtn = document.getElementById('btn');
-      var oLangBtn = document.getElementById('lang-btn')
-      var oBtnMenu = document.getElementById('btn_menu');
-      var oLangLi = document.getElementById('lang-li');
+	var doc = document,
+                   oBtn = doc.getElementById('btn'),
+	      oLangBtn = doc.getElementById('lang-btn'),
+	      oBtnMenu = doc.getElementById('btn_menu'),
+	      oLangLi = doc.getElementById('lang-li');
 
-      
-      	menuShowHide(oBtn,oBtnMenu);	
-      	menuShowHide(oLangBtn,oLangLi)
-      
-	
+      	     menuShowHide(oBtn,oBtnMenu);	
+       	     menuShowHide(oLangBtn,oLangLi);
+
+
+      	var ball = doc.getElementById('ball');
+	      speedL = 10,  speedT = 10, ballL = 0,ballH = 0,
+                   clientW = doc.documentElement.clientWidth || doc.body.clientWidth,
+                   clientH = doc.documentElement.clientHeight || doc.body.clientHeight,
+	      maxL = clientW - ball.clientWidth,   maxT = clientH - ball.clientHeight,   time = null;
+	function rebound(){
+		ballL += speedL;
+		ballH +=speedT;
+		ball.style.left = ballL +"px";
+		ball.style.top = ballH +"px";
+		if(ballL>=maxL){   
+		speedL = -speedL;
+		}
+		if(ballL<=0){   
+		speedL = 10;
+		}
+		if(ballH>=maxT){
+		speedT = -speedT; 
+		}
+		if(ballH<=0){
+		speedT = 10; 
+		}
+
+	}
+		time = setInterval(rebound,50)
 }
 
+
+
+  
 </script>
 </head>
-<body>
+<body >
+
+	<div id="ball" ></div>
+	<div id="asteriods">
+			<img class="a-l" src="imgs/pictures/asteroids-left.png" alt="" />
+			<img class="a-r" src="imgs/pictures/asteroids-right.png" alt="" />
+			<img class="b-l" src="imgs/pictures/asteroids-left.png" alt="" />
+			<img class="b-r" src="imgs/pictures/asteroids-right.png" alt="" />
+	</div>
+
 	<nav id="nav">
+
 		<div class="nav-container">
+			
 			<div class="nav-menu">
 				<a href="#" class="btn" id="btn"></a>
 				<ul id="btn_menu">
-					<li><a href="#">ABOUT</a></li>
+					<li><a href="#About">ABOUT</a></li>
 					<li><a href="#">E-SPORTS</a></li>
 					<li><a href="#">OUR PROJECTS</a></li>
 					<li><a href="#">SYSTEM MODULES</a></li>
@@ -68,7 +107,7 @@ window.onload = function(){
 
 
 	<main id="main">
-		<div class="top-title">
+		<div class="top-title" >
 			<img src="imgs/pictures/planet-1.png" alt="planet-2" />
 			<h4>BIG DEAL ENGINE - your pass to e-Sports</h4>
 			<a href="#0" class="btn-arrow-down"> 
@@ -233,8 +272,10 @@ window.onload = function(){
 			</div>
 			<div class="planet-2-area">
 				<div class="planet-2-orbit"></div>
-				<img class="orbit-rocket" src="imgs/pictures/rocket-yellow.png" alt="" />
+				
 				<div class="planet-2-pic">
+					<div class="aaa"></div>
+				            
 					<img src="imgs/pictures/planet-2.png" alt="planet" />
 				</div>
 				<div class="planet-2-text">
@@ -260,7 +301,7 @@ window.onload = function(){
 			</div>
 			<ul class="mod-list">
 				<li>
-					<article>
+					<article id="aaa">
 						<div class="mod-pic">
 							<img src="imgs/pictures/module-1.png" alt="" />
 						</div>
@@ -420,34 +461,11 @@ window.onload = function(){
 
 
 
+<script type="text/javascript">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 <script src="javascript/main/main.js"></script>
-
+<!-- <script type="text/javascript" src="http://cdn.gbtags.com/pixi.js/1.6.1/pixi.js"></script> -->
 </body>
 </html>
