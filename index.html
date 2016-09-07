@@ -6,52 +6,14 @@
 	 <title>Easy Rocket Studio - e-Sports Website Engine development</title>
 	 <link rel="stylesheet"  href="stylesheets/customize/index.css" />
 	 <link rel="stylesheet"  href="stylesheets/customize/animation.css">
-	<script>
-window.onload = function(){
-	var doc = document,
-                   oBtn = doc.getElementById('btn'),
-	      oLangBtn = doc.getElementById('lang-btn'),
-	      oBtnMenu = doc.getElementById('btn_menu'),
-	      oLangLi = doc.getElementById('lang-li');
-
-      	     menuShowHide(oBtn,oBtnMenu);	
-       	     menuShowHide(oLangBtn,oLangLi);
 
 
-      	var ball = doc.getElementById('ball');
-	      speedL = 10,  speedT = 10, ballL = 0,ballH = 0,
-                   clientW = doc.documentElement.clientWidth || doc.body.clientWidth,
-                   clientH = doc.documentElement.clientHeight || doc.body.clientHeight,
-	      maxL = clientW - ball.clientWidth,   maxT = clientH - ball.clientHeight,   time = null;
-	function rebound(){
-		ballL += speedL;
-		ballH +=speedT;
-		ball.style.left = ballL +"px";
-		ball.style.top = ballH +"px";
-		if(ballL>=maxL){   
-		speedL = -speedL;
-		}
-		if(ballL<=0){   
-		speedL = 10;
-		}
-		if(ballH>=maxT){
-		speedT = -speedT; 
-		}
-		if(ballH<=0){
-		speedT = 10; 
-		}
-
-	}
-		time = setInterval(rebound,50)
-}
-
-
-
-  
-</script>
 </head>
 <body >
-
+	<div id="loading">
+		<div class="tossing"></div>
+		<div class="cow"></div>
+	</div>
 	<div id="ball" ></div>
 	<div id="asteriods">
 			<img class="a-l" src="imgs/pictures/asteroids-left.png" alt="" />
@@ -59,6 +21,9 @@ window.onload = function(){
 			<img class="b-l" src="imgs/pictures/asteroids-left.png" alt="" />
 			<img class="b-r" src="imgs/pictures/asteroids-right.png" alt="" />
 	</div>
+
+
+
 
 	<nav id="nav">
 
@@ -77,7 +42,7 @@ window.onload = function(){
 			</div>
 
 			<div class="nav-mid-logo">
-				<img src="/home/vaevau/vaevau/WebDemo/bestWorks/imgs/pictures/nav-min-logo.jpg" alt="nav-logo" />
+				<img src="imgs/pictures/nav-min-logo.jpg" alt="nav-logo" />
 			</div>
 
 			<div class="nav-r-menu">
@@ -274,7 +239,7 @@ window.onload = function(){
 				<div class="planet-2-orbit"></div>
 				
 				<div class="planet-2-pic">
-					<div class="aaa"></div>
+					<div class="rocket-yellow"></div>
 				            
 					<img src="imgs/pictures/planet-2.png" alt="planet" />
 				</div>
@@ -301,7 +266,7 @@ window.onload = function(){
 			</div>
 			<ul class="mod-list">
 				<li>
-					<article id="aaa">
+					<article>
 						<div class="mod-pic">
 							<img src="imgs/pictures/module-1.png" alt="" />
 						</div>
@@ -460,12 +425,56 @@ window.onload = function(){
 
 
 
+<script src="javascript/main/main.js"></script>
+<script src="libs/jquery.min.js"></script>
+	<script>
 
-<script type="text/javascript">
+  	$(window).load(function() {
+
+		$("#loading").fadeOut("fast");;
+	});
+	
+window.onload = function(){
+	var doc = document,
+                   oBtn = doc.getElementById('btn'),
+	      oLangBtn = doc.getElementById('lang-btn'),
+	      oBtnMenu = doc.getElementById('btn_menu'),
+	      oLangLi = doc.getElementById('lang-li');
+
+      	     menuShowHide(oBtn,oBtnMenu);	
+       	     menuShowHide(oLangBtn,oLangLi);
+
+
+      	var ball = doc.getElementById('ball');
+	      speedL = 10,  speedT = 10, ballL = 0,ballH = 0,
+                   clientW = doc.documentElement.clientWidth || doc.body.clientWidth,
+                   clientH = doc.documentElement.clientHeight || doc.body.clientHeight,
+	      maxL = clientW - ball.clientWidth,   maxT = clientH - ball.clientHeight,   time = null;
+	function rebound(){
+		ballL += speedL;
+		ballH +=speedT;
+		ball.style.left = ballL +"px";
+		ball.style.top = ballH +"px";
+		if(ballL>=maxL){   
+		speedL = -speedL;
+		}
+		if(ballL<=0){   
+		speedL = 10;
+		}
+		if(ballH>=maxT){
+		speedT = -speedT; 
+		}
+		if(ballH<=0){
+		speedT = 10; 
+		}
+
+	}
+		time = setInterval(rebound,50)
+}
+
+
 
 </script>
 
-<script src="javascript/main/main.js"></script>
-<!-- <script type="text/javascript" src="http://cdn.gbtags.com/pixi.js/1.6.1/pixi.js"></script> -->
 </body>
 </html>
