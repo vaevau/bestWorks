@@ -4,16 +4,35 @@
 	 <meta charset="utf-8" />
 	  <link rel="shortcut icon" type="image/x-icon" href="imgs/icon/favicon.ico" />
 	 <title>Easy Rocket Studio - e-Sports Website Engine development</title>
-	 <link rel="stylesheet" type="text/css" href="stylesheets/customize/index.css" />
-	
+	 <link rel="stylesheet"  href="stylesheets/customize/index.css" />
+	 <link rel="stylesheet"  href="stylesheets/customize/animation.css">
+
+
 </head>
-<body>
+<body >
+	<div id="loading">
+		<div class="tossing"></div>
+		<div class="cow"></div>
+	</div>
+	<div id="ball" ></div>
+	<div id="asteriods">
+			<img class="a-l" src="imgs/pictures/asteroids-left.png" alt="" />
+			<img class="a-r" src="imgs/pictures/asteroids-right.png" alt="" />
+			<img class="b-l" src="imgs/pictures/asteroids-left.png" alt="" />
+			<img class="b-r" src="imgs/pictures/asteroids-right.png" alt="" />
+	</div>
+
+
+
+
 	<nav id="nav">
+
 		<div class="nav-container">
+			
 			<div class="nav-menu">
-				<a href="#" class="btn"></a>
-				<ul>
-					<li><a href="#">ABOUT</a></li>
+				<a href="#" class="btn" id="btn"></a>
+				<ul id="btn_menu">
+					<li><a href="#About">ABOUT</a></li>
 					<li><a href="#">E-SPORTS</a></li>
 					<li><a href="#">OUR PROJECTS</a></li>
 					<li><a href="#">SYSTEM MODULES</a></li>
@@ -23,14 +42,14 @@
 			</div>
 
 			<div class="nav-mid-logo">
-				<img src="/home/vaevau/vaevau/WebDemo/bestWorks/imgs/pictures/nav-min-logo.jpg" alt="nav-logo" />
+				<img src="imgs/pictures/nav-min-logo.jpg" alt="nav-logo" />
 			</div>
 
 			<div class="nav-r-menu">
 				<a href="#" class="intro">DOWNLOAD PRESENTATION</a>
-				<a href="#" class="lang-btn">EN<span></span></a>
+				<a href="#" class="lang-btn"  id="lang-btn">EN<span></span></a>
 				<div class="lang-menu">
-					<ul>
+					<ul id="lang-li">
 						<li><a href="#">RU</a></li>
 						<li><a href="#">EN</a></li>
 					</ul>	
@@ -53,7 +72,7 @@
 
 
 	<main id="main">
-		<div class="top-title">
+		<div class="top-title" >
 			<img src="imgs/pictures/planet-1.png" alt="planet-2" />
 			<h4>BIG DEAL ENGINE - your pass to e-Sports</h4>
 			<a href="#0" class="btn-arrow-down"> 
@@ -67,9 +86,16 @@
 		<div class="center-planet">
 			<div class="big-planet">
 				<div class="planet-pic">
-					<img src="imgs/pictures/planet-big-with-orbits.png">
-					<img src="http://easyrocketstudio.com/img/stars3.svg " alt=" " />
 					<img src="http://easyrocketstudio.com/img/stars2.svg" alt="" />
+				</div>
+				<div class="planet-pic-2">
+					<img src="http://easyrocketstudio.com/img/stars3.svg " alt=" " />
+
+				</div>
+				<div class="round-dot">
+					<span class="round-1"></span>
+					<span class="round-2"></span>			
+					<span class="round-3"></span>
 				</div>
 				<div class="planet-text">
 					<h2>What is <span>Big Deal Engine?</span></h2>
@@ -211,8 +237,10 @@
 			</div>
 			<div class="planet-2-area">
 				<div class="planet-2-orbit"></div>
-				<img class="orbit-rocket" src="imgs/pictures/rocket-yellow.png" alt="" />
+				
 				<div class="planet-2-pic">
+					<div class="rocket-yellow"></div>
+				            
 					<img src="imgs/pictures/planet-2.png" alt="planet" />
 				</div>
 				<div class="planet-2-text">
@@ -397,35 +425,56 @@
 
 
 
+<script src="javascript/main/main.js"></script>
+<script src="libs/jquery.min.js"></script>
+	<script>
+
+  	$(window).load(function() {
+
+		$("#loading").fadeOut("fast");;
+	});
+	
+window.onload = function(){
+	var doc = document,
+                   oBtn = doc.getElementById('btn'),
+	      oLangBtn = doc.getElementById('lang-btn'),
+	      oBtnMenu = doc.getElementById('btn_menu'),
+	      oLangLi = doc.getElementById('lang-li');
+
+      	     menuShowHide(oBtn,oBtnMenu);	
+       	     menuShowHide(oLangBtn,oLangLi);
+
+
+      	var ball = doc.getElementById('ball');
+	      speedL = 10,  speedT = 10, ballL = 0,ballH = 0,
+                   clientW = doc.documentElement.clientWidth || doc.body.clientWidth,
+                   clientH = doc.documentElement.clientHeight || doc.body.clientHeight,
+	      maxL = clientW - ball.clientWidth,   maxT = clientH - ball.clientHeight,   time = null;
+	function rebound(){
+		ballL += speedL;
+		ballH +=speedT;
+		ball.style.left = ballL +"px";
+		ball.style.top = ballH +"px";
+		if(ballL>=maxL){   
+		speedL = -speedL;
+		}
+		if(ballL<=0){   
+		speedL = 10;
+		}
+		if(ballH>=maxT){
+		speedT = -speedT; 
+		}
+		if(ballH<=0){
+		speedT = 10; 
+		}
+
+	}
+		time = setInterval(rebound,50)
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</script>
 
 </body>
 </html>
